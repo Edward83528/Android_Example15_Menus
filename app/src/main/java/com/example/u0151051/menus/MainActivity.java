@@ -33,12 +33,13 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         //依據getitemId來判斷使用者點選哪一個item
         super.onOptionsItemSelected(item);
+        //item.getItemId()它的起始位置是1
         switch (item.getItemId()) {
-            case 0:
-                Toast.makeText(MainActivity.this, "說明", Toast.LENGTH_SHORT).show();
-                tv.setText("說明:");
-                break;
             case 1:
+                Toast.makeText(MainActivity.this, "你按下說明", Toast.LENGTH_SHORT).show();
+                tv.setText("你按下說明");
+                break;
+            case 2:
                 finish();
                 break;
         }
